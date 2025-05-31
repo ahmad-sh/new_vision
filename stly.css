@@ -1,0 +1,200 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Cairo', sans-serif;
+background: #f2f2f2;
+color: #333;
+line-height: 1.6;
+scroll-behavior: smooth;
+}
+
+/* الحاوية العامة */
+.container {
+width: 90%;
+max-width: 1200px;
+margin: auto;
+padding: 20px;
+}
+
+/* الهيدر */
+header {
+background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+color: white;
+padding: 60px 0;
+text-align: center;
+position: relative;
+}
+
+header h1 {
+font-size: 3rem;
+margin-bottom: 10px;
+animation: fadeInDown 1s ease-in-out;
+}
+
+header p {
+font-size: 1.2rem;
+margin-bottom: 20px;
+opacity: 0.9;
+}
+
+nav {
+margin-top: 20px;
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+font-weight: 600;
+transition: color 0.3s;
+}
+
+nav a:hover {
+color: #1abc9c;
+}
+
+/* القسم الرئيسي (HERO) */
+.hero {
+background-image: url("pngtree-beautiful-technology-website-business-poster-background-template-image_148436.jpg");
+background-size: cover;
+background-position: center;
+color: white;
+padding: 100px 20px;
+text-align: center;
+position: relative;
+}
+
+.hero::after {
+content: "";
+position: absolute;
+top: 0; left: 0;
+width: 100%;
+height: 100%;
+background: rgba(15, 32, 39, 0.7);
+z-index: 1;
+}
+
+.hero h2,
+.hero p,
+.hero .btn {
+position: relative;
+z-index: 2;
+}
+
+.hero h2 {
+font-size: 2.5rem;
+margin-bottom: 20px;
+animation: slideInUp 1s ease;
+}
+
+.hero p {
+font-size: 1.2rem;
+margin-bottom: 30px;
+}
+
+.btn {
+background: #1abc9c;
+color: white;
+padding: 12px 25px;
+border: none;
+border-radius: 25px;
+text-decoration: none;
+font-weight: bold;
+transition: background 0.3s, transform 0.2s;
+display: inline-block;
+}
+
+.btn:hover {
+background: #16a085;
+transform: scale(1.05);
+}
+
+/* الأقسام */
+section {
+padding: 60px 0;
+background: white;
+text-align: center;
+}
+
+section:nth-child(even) {
+background: #f9f9f9;
+}
+
+section h2 {
+font-size: 2rem;
+margin-bottom: 20px;
+position: relative;
+display: inline-block;
+}
+
+section h2::after {
+content: "";
+display: block;
+width: 60px;
+height: 4px;
+background: #1abc9c;
+margin: 10px auto 0;
+}
+
+ul {
+list-style: none;
+padding: 0;
+}
+
+ul li {
+padding: 10px 0;
+font-size: 1.1rem;
+}
+
+/* الفوتر */
+footer {
+background: #2c3e50;
+color: white;
+text-align: center;
+padding: 20px 0;
+}
+
+/* أنيميشن */
+@keyframes fadeInDown {
+from {
+opacity: 0;
+transform: translateY(-20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@keyframes slideInUp {
+from {
+opacity: 0;
+transform: translateY(30px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+/* responsive */
+@media (max-width: 768px) {
+header h1 {
+font-size: 2rem;
+}
+
+.hero h2 {
+font-size: 1.8rem;
+}
+
+.btn {
+padding: 10px 20px;
+}
+}
